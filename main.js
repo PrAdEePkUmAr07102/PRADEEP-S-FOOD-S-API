@@ -1,26 +1,13 @@
 import express from "express";
+import foodRoutes from "./routes/foods.routes.js"
 
 const app = express();
 const PORT = 7070;
 
 
 //CRUD FUNCTIONALITY OF PRADEEPS FOODS
+app.use("/foods",foodRoutes);
 
-//R - FOR READING 
-
-app.get("/foods",()=>{});
-
-//C - FOR CREATING 
-
-app.post("/foods",()=>{});
-
-//U -FOR UPDATE
-
-app.put("/foods/1",()=>{});
-
-//D - FOR DELETE
-
-app.delete("/foods/2",()=>{});
 
 
 app.get("/",(req,res)=>{
