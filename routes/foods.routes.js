@@ -1,11 +1,14 @@
 import express from "express";
-import { FoodCreate, FoodLists, FoodUpdate, FoodWaste } from "../contollers/foods.controller.js";
+import { FoodCreate, FoodDetail, FoodLists, FoodUpdate, FoodWaste } from "../contollers/foods.controller.js";
 
 const router = express.Router();
 
 //R - FOR READING 
 
 router.get("/",FoodLists);
+
+// TO SEE A FOOD IN DETAIL:
+router.get("/:id",FoodDetail);
 
 //C - FOR CREATING 
 
@@ -14,11 +17,11 @@ router.post("/",FoodCreate);
 
 //U -FOR UPDATE
 
-router.put("/",FoodUpdate);
+router.put("/:id",FoodUpdate);
 
 //D - FOR DELETE
 
-router.delete("/",FoodWaste);
+router.delete("/:id",FoodWaste);
 
 
 export default router;
