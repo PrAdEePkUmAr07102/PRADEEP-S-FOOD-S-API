@@ -6,3 +6,9 @@ IMPORTANT COMMANDS:
 4.'git add . '
 5.'git commit -m init'
 6.'git push -u origin master'
+
+
+//MONGODB ATLAS USER NAME AND PASS:
+pradeep07spk
+8seXjzfMwoq6dyeb
+

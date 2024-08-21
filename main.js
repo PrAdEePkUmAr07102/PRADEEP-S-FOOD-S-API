@@ -1,9 +1,19 @@
 import express from "express";
 import foodRoutes from "./routes/foods.routes.js"
+import connectDB from "./lib/dB.js";
 
 const app = express();
 const PORT = 7070;
 
+
+//DATA UNDERSTANDING MIDDLEWARE
+
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
+
+//CONNECTDB:
+connectDB();
 
 //CRUD FUNCTIONALITY OF PRADEEPS FOODS
 app.use("/foods",foodRoutes);

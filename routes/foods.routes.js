@@ -1,30 +1,24 @@
 import express from "express";
+import { FoodCreate, FoodLists, FoodUpdate, FoodWaste } from "../contollers/foods.controller.js";
 
 const router = express.Router();
 
 //R - FOR READING 
 
-router.get("/",(req,res)=>{
-    res.send("Get A FOOD");
-});
+router.get("/",FoodLists);
 
 //C - FOR CREATING 
 
-router.post("/",(req,res)=>{
-    res.send("Make A Food");
-});
+router.post("/",FoodCreate);
+
 
 //U -FOR UPDATE
 
-router.put("/",(req,res)=>{
-    res.send("Add some salt");
-});
+router.put("/",FoodUpdate);
 
 //D - FOR DELETE
 
-router.delete("/",(req,res)=>{
-    res.send("Don't waste food");
-});
+router.delete("/",FoodWaste);
 
 
 export default router;
